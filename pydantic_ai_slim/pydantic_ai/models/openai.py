@@ -215,7 +215,7 @@ class OpenAIModel(Model):
         if not tools:
             tool_choice: Literal['none', 'required', 'auto'] | None = None
         elif not model_request_parameters.allow_text_result:
-            tool_choice = 'required'
+            tool_choice = 'auto'
         else:
             tool_choice = 'auto'
 
